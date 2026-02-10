@@ -1,0 +1,15 @@
+D:\RideSharing\obj\Debug\net10.0\RideSharing.GeneratedMSBuildEditorConfig.editorconfig
+D:\RideSharing\obj\Debug\net10.0\RideSharing.AssemblyInfoInputs.cache
+D:\RideSharing\obj\Debug\net10.0\RideSharing.AssemblyInfo.cs
+D:\RideSharing\obj\Debug\net10.0\RideSharing.csproj.CoreCompileInputs.cache
+D:\RideSharing\obj\Debug\net10.0\RideSharing.sourcelink.json
+D:\RideSharing\bin\Debug\net10.0\RideSharing.exe
+D:\RideSharing\bin\Debug\net10.0\RideSharing.deps.json
+D:\RideSharing\bin\Debug\net10.0\RideSharing.runtimeconfig.json
+D:\RideSharing\bin\Debug\net10.0\RideSharing.dll
+D:\RideSharing\bin\Debug\net10.0\RideSharing.pdb
+D:\RideSharing\obj\Debug\net10.0\RideSharing.dll
+D:\RideSharing\obj\Debug\net10.0\refint\RideSharing.dll
+D:\RideSharing\obj\Debug\net10.0\RideSharing.pdb
+D:\RideSharing\obj\Debug\net10.0\RideSharing.genruntimeconfig.cache
+D:\RideSharing\obj\Debug\net10.0\ref\RideSharing.dll

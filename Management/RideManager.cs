@@ -1,5 +1,4 @@
-using System.ComponentModel.Design;
-using System.Runtime.CompilerServices;
+using RideSharing.Users;
 
 namespace RideSharing.Management
 {
@@ -25,7 +24,7 @@ namespace RideSharing.Management
         public List<Driver> GetAvailableDrivers(string vehicleType)
         {
             List<Driver> available = new List<Driver>();
-            foreach(Driver d in _drivers)
+            foreach (Driver d in _drivers)
             {
                 if (d.Vehicle.GetVehicleType() == vehicleType && d.IsAvailable)
                 {
@@ -37,7 +36,7 @@ namespace RideSharing.Management
 
         public static RideManager GetInstance()
         {
-            if ( _instance == null )
+            if (_instance == null)
             {
                 _instance = new RideManager();
             }

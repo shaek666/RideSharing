@@ -1,3 +1,5 @@
+using RideSharing.Vehicles;
+
 namespace RideSharing.Users
 {
     public class Driver : User
