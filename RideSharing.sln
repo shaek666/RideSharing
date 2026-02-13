@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideSharing", "RideSharing.csproj", "{7174B1FA-4C2A-D369-7682-977D4187820B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7174B1FA-4C2A-D369-7682-977D4187820B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7174B1FA-4C2A-D369-7682-977D4187820B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7174B1FA-4C2A-D369-7682-977D4187820B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7174B1FA-4C2A-D369-7682-977D4187820B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4687C76D-5A78-41C0-8B55-6F914999785B}
+	EndGlobalSection
+EndGlobal

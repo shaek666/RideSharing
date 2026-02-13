@@ -6,7 +6,9 @@ namespace RideSharing.Users
 
         public override void DisplayInfo()
         {
-            Console.WriteLine($"ID: {Id}, Name:  {Name}, Phone: {Phone}");
+            Console.WriteLine(
+                $"Role: {GetRole()}, ID: {Id}, Name: {Name}, Phone: {Phone}, Wallet: ${WalletBalance:F2}"
+            );
         }
 
         public override string GetRole()
@@ -14,6 +16,4 @@ namespace RideSharing.Users
             return "Rider";
         }
     }
-
-
 }

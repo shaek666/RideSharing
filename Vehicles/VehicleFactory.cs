@@ -1,25 +1,21 @@
-using System.Collections.Concurrent;
-using System.Dynamic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-
 namespace RideSharing.Vehicles
 {
     public class VehicleFactory
     {
         public IVehicle CreateVehicle(string type)
         {
-            switch (type)
+            if (string.IsNullOrWhiteSpace(type))
             {
-                case "Bike":
-                return new Bike();
-                case "CNG":
-                return new CNG();
-                case "Car":
-                return new Car();
-                default:
-                return null;
+                throw new ArgumentException("Vehicle type is required.", nameof(type));
             }
+
+            return type.Trim().ToUpperInvariant() switch
+            {
+                "BIKE" => new Bike(),
+                "CNG" => new CNG(),
+                "CAR" => new Car(),
+                _ => throw new ArgumentOutOfRangeException(nameof(type), $"Unsupported vehicle type: {type}")
+            };
         }
     }
 }

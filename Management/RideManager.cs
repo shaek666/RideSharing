@@ -4,8 +4,10 @@ namespace RideSharing.Management
 {
     public class RideManager
     {
-        private static RideManager _instance = null;
-        private List<Driver> _drivers;
+        private static RideManager? _instance;
+        private static readonly object InstanceLock = new object();
+        private readonly List<Driver> _drivers;
+
         private RideManager()
         {
             _drivers = new List<Driver>();
@@ -13,20 +15,40 @@ namespace RideSharing.Management
 
         public void RegisterDriver(Driver driver)
         {
+            if (driver is null)
+            {
+                throw new ArgumentNullException(nameof(driver));
+            }
+
+            bool alreadyExists = _drivers.Any(d => d.Id == driver.Id);
+            if (alreadyExists)
+            {
+                throw new InvalidOperationException($"Driver with ID {driver.Id} is already registered.");
+            }
+
             _drivers.Add(driver);
         }
 
         public List<Driver> GetAllDrivers()
         {
-            return _drivers;
+            return new List<Driver>(_drivers);
         }
 
         public List<Driver> GetAvailableDrivers(string vehicleType)
         {
+            if (string.IsNullOrWhiteSpace(vehicleType))
+            {
+                return new List<Driver>();
+            }
+
             List<Driver> available = new List<Driver>();
             foreach (Driver d in _drivers)
             {
-                if (d.Vehicle.GetVehicleType() == vehicleType && d.IsAvailable)
+                if (
+                    d.IsAvailable
+                    && d.Vehicle is not null
+                    && string.Equals(d.Vehicle.GetVehicleType(), vehicleType, StringComparison.OrdinalIgnoreCase)
+                )
                 {
                     available.Add(d);
                 }
@@ -36,11 +58,16 @@ namespace RideSharing.Management
 
         public static RideManager GetInstance()
         {
-            if (_instance == null)
+            if (_instance is not null)
             {
-                _instance = new RideManager();
+                return _instance;
             }
-            return _instance;
+
+            lock (InstanceLock)
+            {
+                _instance ??= new RideManager();
+                return _instance;
+            }
         }
     }
 }

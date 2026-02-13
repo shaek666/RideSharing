@@ -13,3 +13,8 @@ D:\RideSharing\obj\Debug\net10.0\refint\RideSharing.dll
 D:\RideSharing\obj\Debug\net10.0\RideSharing.pdb
 D:\RideSharing\obj\Debug\net10.0\RideSharing.genruntimeconfig.cache
 D:\RideSharing\obj\Debug\net10.0\ref\RideSharing.dll
+D:\RideSharing\bin\TempValidation\RideSharing.exe
+D:\RideSharing\bin\TempValidation\RideSharing.deps.json
+D:\RideSharing\bin\TempValidation\RideSharing.runtimeconfig.json
+D:\RideSharing\bin\TempValidation\RideSharing.dll
+D:\RideSharing\bin\TempValidation\RideSharing.pdb

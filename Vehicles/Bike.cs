@@ -1,7 +1,3 @@
-using System.ComponentModel;
-using System.Data.SqlTypes;
-using System.Reflection.Metadata.Ecma335;
-
 namespace RideSharing.Vehicles
 {
     public class Bike : IVehicle
